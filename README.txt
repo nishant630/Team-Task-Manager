@@ -85,15 +85,3 @@ Option 2: Running Locally Without Docker
    npm run dev
 5. Open http://localhost:3000 in your browser.
 
-
-Deployment (Railway)
---------------------
-The project includes railway.json and a root Procfile configured for deployment via Railway's Nixpacks builder.
-1. Connect your repository to Railway.
-2. Add a MongoDB plugin database service.
-3. Configure the following environment variables in your web service:
-   - MONGO_URI (automatically injected if using Railway's MongoDB database)
-   - JWT_SECRET (generate a secure secret string)
-   - PORT (automatically set by Railway)
-   - NODE_ENV = production
-4. Deploy! The project's build scripts will automatically build the React assets, and Express will serve them dynamically.
